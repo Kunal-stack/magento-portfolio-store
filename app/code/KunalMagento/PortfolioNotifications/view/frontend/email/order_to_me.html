@@ -1,0 +1,7 @@
+<p><strong>New Portfolio Order</strong></p>
+<p>Order: {{var order.getIncrementId()}}</p>
+<ul>
+    {{foreach order.getAllVisibleItems() as $_item}}
+    <li>{{var $_item.getName()}} × {{var $_item.getQtyOrdered()}}</li>
+    {{/foreach}}
+</ul>

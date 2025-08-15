@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Mail/etc/email_templates.xsd">
+
+    <template id="kunal_portfolio_order_to_me"
+              label="Portfolio Order Notification to Me"
+              file="order_to_me.html"
+              type="html"
+              area="frontend"
+              module="KunalMagento_PortfolioNotifications"/>
+
+    <!-- Keep this only if you actually have the file below -->
+    <template id="kunal_portfolio_order_to_customer"
+              label="Portfolio Order Confirmation to Customer"
+              file="order_to_customer.html"
+              type="html"
+              area="frontend"
+              module="KunalMagento_PortfolioNotifications"/>
+</config>

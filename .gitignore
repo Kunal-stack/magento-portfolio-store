@@ -1,0 +1,41 @@
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Composer auth / local overrides
+auth.json
+/*.local.php
+
+# Magento env (keep config.php, ignore env.php)
+app/etc/env.php
+
+# Composer vendor & tools
+/vendor/
+/composer.phar
+
+# Generated code & caches
+/generated/*
+!/generated/.htaccess
+/var/*
+!/var/.htaccess
+
+# Static view files (deploy builds these)
+pub/static/*
+!pub/static/.htaccess
+
+# Uploaded media
+pub/media/*
+!pub/media/.htaccess
+
+# Preprocessed LESS/JS cache
+/var/view_preprocessed/*
+
+# Node/build artefacts (if you add a theme build)
+node_modules/
+dist/
+
+# Dev helpers you created
+/dev-*.php
+phpinfo.php
+dev-mail-test.php

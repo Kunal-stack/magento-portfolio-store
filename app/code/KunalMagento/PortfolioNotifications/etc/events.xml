@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!-- Fires after order placement (safe for creating invoice & emailing) -->
+    <event name="sales_order_place_after">
+        <observer name="kunalmagento_portfolio_send_notifications"
+                  instance="KunalMagento\PortfolioNotifications\Observer\SendNotifications"/>
+    </event>
+</config>
