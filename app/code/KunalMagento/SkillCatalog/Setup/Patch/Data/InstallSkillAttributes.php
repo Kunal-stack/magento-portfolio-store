@@ -68,7 +68,7 @@ class InstallSkillAttributes implements DataPatchInterface
                         'comparable'       => 0,
                         'visible_on_front' => 1,
                         'unique'           => 0,
-                        'apply_to'         => 'virtual'
+                        'apply_to'         => ''
                     ], $cfg)
                 );
             }
