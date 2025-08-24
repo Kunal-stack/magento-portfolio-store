@@ -1,0 +1,26 @@
+<?php
+/** @var \Magento\Catalog\Block\Product\View $block */
+$product   = $block->getProduct();
+
+$years     = (int) $product->getData('km_years_experience');
+$level     = (string) $product->getAttributeText('km_skill_level'); // <-- label, not ID
+$stackRaw  = (string) $product->getData('km_tech_stack');
+
+$stack = array_filter(array_map(static function ($s) {
+    return trim($s);
+}, explode(',', $stackRaw)));
+?>
+
+<div class="km-skills" data-role="km-skills">
+    <?php if ($years > 0): ?>
+        <span class="km-pill"><?= $years ?>+ yrs</span>
+    <?php endif; ?>
+
+    <?php if ($level !== ''): ?>
+        <span class="km-chip"><?= $block->escapeHtml($level) ?></span>
+    <?php endif; ?>
+
+    <?php foreach ($stack as $tech): ?>
+        <span class="km-chip"><?= $block->escapeHtml($tech) ?></span>
+    <?php endforeach; ?>
+</div>

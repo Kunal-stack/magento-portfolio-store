@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Prefer the slim bar area above the logo -->
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="km.topbar"
+                   template="Magento_Theme::html/km_topbar.phtml"
+                   before="-"/>
+        </referenceContainer>
+
+        <!-- If you don’t see it for some reason, switch to page.top as fallback:
+        <referenceContainer name="page.top">
+          <block class="Magento\Framework\View\Element\Template" name="km.topbar" template="Magento_Theme::html/km_topbar.phtml" before="-"/>
+        </referenceContainer>
+        -->
+    </body>
+</page>
