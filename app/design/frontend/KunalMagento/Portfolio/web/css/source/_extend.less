@@ -1,16 +1,40 @@
 .page-header { background: #222; }
 .page-title-wrapper .page-title { color: #1a73e8; }
+
+/* Hide Magento's default header links (safety net) */
+.header.panel .header.links,
+.header.panel .links { display: none; }
+
+/* Topbar */
 .km-topbar {
-    background: #111;
-    color: #fff;
-    line-height: 32px;
+    background: #0f172a;
+    color: #e2e8f0;
     font-size: 12px;
-    padding: 0 16px;
-    letter-spacing: .2px;
+    line-height: 34px;
+    a { color: #e2e8f0; text-decoration: none; }
+    a:hover { color: #f59e0b; }
 }
-.km-topbar a { color: #ffd166; text-decoration: none; }
-.km-skills { margin: 12px 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
-.km-pill  { background: #1a73e8; color: #fff; border-radius: 999px; padding: 4px 10px; font-size: 12px; line-height: 18px; }
-.km-chip  { background: #f5f5f5; border: 1px solid #ddd; border-radius: 999px; padding: 4px 10px; font-size: 12px; line-height: 18px; }
+.km-topbar__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.km-topbar__left { display: flex; align-items: center; gap: 10px; }
+.km-topbar__brand { font-weight: 600; white-space: nowrap; }
+.km-tags { opacity: .85; white-space: nowrap; }
+.km-badge img { display: inline-block; vertical-align: -2px; }
 
+/* Right links */
+.km-topbar__right { display: flex; gap: 14px; }
 
+/* The leading dot */
+.km-dot { color: #f59e0b; margin-right: 6px; }
+
+/* Skills chips (already used later) */
+.km-skills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.km-chip{background:#f1f5f9;border-radius:9999px;padding:3px 10px;font-size:12px}
+.km-pill{background:#e0f2fe;color:#0369a1}

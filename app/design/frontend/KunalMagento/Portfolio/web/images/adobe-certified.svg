@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20" height="20" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adobe Certified">
+    <title>Adobe Certified</title>
+    <rect width="64" height="64" rx="8" fill="#FF0000"/>
+    <!-- Stylized Adobe “A” -->
+    <path d="M32 12L50 52H41L36.5 42H27.5L23 52H14L32 12ZM29.2 35h5.6L32 28.2 29.2 35z" fill="#FFFFFF"/>
+</svg>

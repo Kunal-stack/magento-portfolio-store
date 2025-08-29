@@ -1,3 +1,28 @@
-<div class="km-topbar">
-    <strong>Portfolio Store</strong> — Magento · PHP · Kafka
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+
+$github    = 'https://github.com/Kunal-stack';
+$linkedin  = 'https://www.linkedin.com/in/kunal-upadhyay-64525717b/';
+$resume    = $block->getViewFileUrl('docs/kunal_resume.pdf');      // place file at: app/design/.../web/docs/kunal_resume.pdf
+$adobeUrl  = 'https://www.credly.com/badges/2d5db933-abe1-4715-8b09-3b20d329c08b';
+$adobeIcon = $block->getViewFileUrl('images/adobe-certified.svg'); // place file at: app/design/.../web/images/adobe-certified.svg
+?>
+<div class="km-topbar" role="navigation" aria-label="Portfolio quick links">
+    <div class="km-topbar__inner">
+        <div class="km-topbar__left">
+            <a class="km-topbar__brand" href="<?= $block->getUrl('') ?>">
+                <span class="km-dot" aria-hidden="true">•</span>
+                Kunal Upadhyay — Adobe-certified Magento Developer
+            </a>
+            <span class="km-tags">Magento · PHP · Kafka</span>
+            <a class="km-badge" href="<?= $adobeUrl ?>" target="_blank" rel="noopener">
+                <img src="<?= $adobeIcon ?>" alt="Adobe Certified" width="16" height="16"/>
+            </a>
+        </div>
+        <nav class="km-topbar__right" aria-label="Quick links">
+            <a href="<?= $github ?>" target="_blank" rel="noopener">GitHub</a>
+            <a href="<?= $linkedin ?>" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="<?= $resume ?>" target="_blank" rel="noopener">Resume</a>
+        </nav>
+    </div>
 </div>
