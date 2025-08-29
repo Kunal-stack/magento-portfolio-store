@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <!-- Insert our topbar at the very top -->
-        <referenceContainer name="page.top">
+        <referenceContainer name="header.panel">
             <block name="km.topbar"
                    as="km_topbar"
                    template="Magento_Theme::html/km_topbar.phtml"
