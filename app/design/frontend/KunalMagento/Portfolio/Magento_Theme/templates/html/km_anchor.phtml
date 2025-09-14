@@ -1,0 +1,17 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$links = [
+    ['#intro',        'Intro'],
+    ['#experience',   'Experience'],
+    ['#education',    'Education'],
+    ['#skills',       'Skills'],
+    ['#achievements', 'Achievements'],
+];
+?>
+<nav class="km-anchor" aria-label="Section navigation">
+    <div class="km-anchor__inner">
+        <?php foreach ($links as [$href, $label]): ?>
+            <a class="km-anchor__link" href="<?= $href ?>"><?= $label ?></a>
+        <?php endforeach; ?>
+    </div>
+</nav>

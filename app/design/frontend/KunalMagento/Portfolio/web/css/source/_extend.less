@@ -1,21 +1,22 @@
-.page-header { background: #222; }
+/* Header tweaks */
+.page-header { background: #0b1220; }
 .page-title-wrapper .page-title { color: #1a73e8; }
 
 /* Hide Magento's default header links (safety net) */
 .header.panel .header.links,
 .header.panel .links { display: none; }
 
-/* Topbar */
+/* ---------------- Topbar ---------------- */
 .km-topbar {
     background: #0f172a;
     color: #e2e8f0;
     font-size: 12px;
     line-height: 34px;
     border-bottom: 1px solid rgba(255,255,255,.06);
-    a { color: #e2e8f0; text-decoration: none; }
-    a:hover { color: #f59e0b; }
 }
-.km-badge img { width: 14px; height: 14px; margin-left: 6px; display: inline-block; vertical-align: -2px; }
+.km-topbar a { color: #e2e8f0; text-decoration: none; }
+.km-topbar a:hover { color: #f59e0b; }
+
 .km-topbar__inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -26,17 +27,139 @@
     gap: 12px;
 }
 .km-topbar__left { display: flex; align-items: center; gap: 10px; }
-.km-topbar__brand { font-weight: 600; white-space: nowrap; }
+
+.km-topbar__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #e2e8f0;
+    text-decoration: none;
+}
+.km-topbar__brand:hover { color: #f59e0b; }
+.km-brand-badge { width: 14px; height: 14px; display: inline-block; }
 .km-tags { opacity: .85; white-space: nowrap; }
 .km-badge img { display: inline-block; vertical-align: -2px; }
 
 /* Right links */
 .km-topbar__right { display: flex; gap: 14px; }
 
-/* The leading dot */
+/* Leading dot */
 .km-dot { color: #f59e0b; margin-right: 6px; }
 
-/* Skills chips (already used later) */
-.km-skills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.km-chip{background:#f1f5f9;border-radius:9999px;padding:3px 10px;font-size:12px}
-.km-pill{background:#e0f2fe;color:#0369a1}
+/* ---------------- Anchor bar (homepage only) ---------------- */
+.km-anchor {
+    position: sticky; top: 64px; z-index: 20;
+    background: #0b1220;
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.km-anchor__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+.km-anchor__link {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: .2px;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+.km-anchor__link:hover { color: #f59e0b; background: rgba(245,158,11,.08); }
+
+/* Smooth scroll + keep section headings clear of header */
+html { scroll-behavior: smooth; }
+.km-section { scroll-margin-top: 120px; }
+
+
+/* ---------------- Hero (Intro) ---------------- */
+.km-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #0b1220 100%);
+    color: #e2e8f0;
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.km-hero__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+}
+.km-hero__title    { font-size: 34px; line-height: 1.2; margin: 4px 0 8px; color: #fff; }
+.km-hero__subtitle { margin: 0 0 16px; opacity: .9; }
+
+.km-hero__cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.km-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 34px; padding: 0 14px; border-radius: 8px;
+    border: 1px solid rgba(255,255,255,.18);
+    color: #e2e8f0; text-decoration: none; background: transparent;
+}
+.km-btn:hover { border-color: #f59e0b; color: #f59e0b; }
+.km-btn--primary {
+    background: #1a73e8; border-color: #1a73e8; color: #fff;
+}
+.km-btn--primary:hover { filter: brightness(1.05); }
+
+.km-badge--adobe {
+    display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; height: 34px;
+    border: 1px solid rgba(255,255,255,.18); border-radius: 8px; text-decoration: none; color: #e2e8f0;
+}
+.km-badge--adobe img { width: 16px; height: 16px; display: inline-block; }
+
+.km-hero__right { display: flex; align-items: center; justify-content: center; }
+.km-hero__mark {
+    width: 72px; height: 72px; border-radius: 14px;
+    background: rgba(255,255,255,.06);
+    display:flex; align-items:center; justify-content:center;
+    font-weight: 700; font-size: 28px; color:#fff; letter-spacing:.5px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .km-hero__inner { grid-template-columns: 1fr; text-align: left; }
+    .km-hero__right { display: none; }
+}
+
+/* ------- Common containers/sections ------- */
+.km-container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+.km-section--pad { padding: 28px 0; }
+
+.km-section__title {
+    margin: 0 0 14px;
+    font-size: 22px;
+    color: #1a73e8;
+}
+
+/* Cards used across sections (dark to match header/hero) */
+.km-card {
+    background: #0f172a;
+    color: #e2e8f0;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.km-item__head { margin-bottom: 8px; }
+.km-item__title { margin: 0; font-size: 18px; color: #fff; }
+.km-item__meta  { font-size: 12px; opacity: .75; }
+.km-item__text  { margin: 8px 0 0; }
+
+.km-list { margin: 10px 0 0 18px; }
+.km-list li { margin: 4px 0; }
+
+/* Skills chips used later */
+.km-skills { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0; }
+.km-chip   { background:#f1f5f9; border-radius:9999px; padding:3px 10px; font-size:12px; }
+.km-pill   { background:#e0f2fe; color:#0369a1; }
+
+

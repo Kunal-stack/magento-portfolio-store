@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20" height="20" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Adobe Certified">
-    <title>Adobe Certified</title>
-    <rect width="64" height="64" rx="8" fill="#FF0000"/>
-    <!-- Stylized Adobe “A” -->
-    <path d="M32 12L50 52H41L36.5 42H27.5L23 52H14L32 12ZM29.2 35h5.6L32 28.2 29.2 35z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" aria-hidden="true">
+    <defs>
+        <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ff2d2d"/>
+            <stop offset="1" stop-color="#d90f0f"/>
+        </linearGradient>
+    </defs>
+    <rect x="20" y="20" width="216" height="160" rx="14" ry="14" fill="url(#g)"/>
+    <text x="128" y="108" fill="#fff" font-size="36" font-weight="700" text-anchor="middle" font-family="Inter, Arial, sans-serif">
+        CERTIFIED
+    </text>
+    <path d="M128 244c-4 0-8-1.2-11.3-3.6L46 187a18 18 0 0 1-7-14v-52h14v52c0 2.1 1 4.1 2.7 5.4l70.7 53.4a9 9 0 0 0 10.9 0l70.7-53.4a6.7 6.7 0 0 0 2.7-5.4v-52h14v52a18 18 0 0 1-7 14l-70.7 53.4a19 19 0 0 1-11.3 3.6Z" fill="#ff2d2d"/>
+    <path d="M128 184c-2.7 0-5-1.5-6-3.9l-28-67.1h16.4l17.6 44.2 17.6-44.2H162l-28 67.1c-1 2.4-3.3 3.9-6 3.9Z" fill="#fff"/>
 </svg>

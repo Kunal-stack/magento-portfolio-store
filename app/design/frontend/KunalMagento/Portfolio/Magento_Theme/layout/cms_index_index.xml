@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <!-- Add the anchor menu bar AFTER the normal header on the HOME page only -->
+    <body>
+        <referenceContainer name="page.top">
+            <block name="km.anchor.menu"
+                   as="km_anchor_menu"
+                   template="Magento_Theme::html/km_anchor.phtml"
+                   after="header.container"/>
+        </referenceContainer>
+    </body>
+
+    <!-- Hide default CMS title on the homepage -->
+    <referenceBlock name="page.main.title" remove="true"/>
+
+    <!-- Intro/Hero goes at the top of the content, before the default page title -->
+    <referenceContainer name="content">
+        <block name="km.hero"
+               as="km_hero"
+               template="Magento_Theme::home/hero.phtml"
+               before="page.main.title"/>
+
+        <!-- Experience + Education (added below in part B) -->
+        <block name="km.experience"
+               as="km_experience"
+               template="Magento_Theme::home/experience.phtml"
+               after="km.hero"/>
+        <block name="km.education"
+               as="km_education"
+               template="Magento_Theme::home/education.phtml"
+               after="km.experience"/>
+    </referenceContainer>
+</page>

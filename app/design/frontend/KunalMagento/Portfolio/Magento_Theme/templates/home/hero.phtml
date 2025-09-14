@@ -1,0 +1,33 @@
+<?php
+
+/** @var \Magento\Framework\View\Element\Template $block */
+$github = 'https://github.com/Kunal-stack';
+$linkedin = 'https://www.linkedin.com/in/kunal-upadhyay-64525717b/';
+$resume = $block->getViewFileUrl('docs/kunal_resume.pdf');
+$adobeUrl = 'https://www.credly.com/badges/2d5db933-abe1-4715-8b09-3b20d329c08b';
+$adobeSvg = $block->getViewFileUrl('images/adobe-certified.svg');
+?>
+<section id="intro" class="km-section km-hero" aria-label="Intro">
+    <div class="km-hero__inner">
+        <div class="km-hero__left">
+            <h1 class="km-hero__title">Kunal Upadhyay</h1>
+            <p class="km-hero__subtitle">Adobe-certified Magento Developer · PHP · Kafka</p>
+
+            <div class="km-hero__cta">
+                <a class="km-btn km-btn--primary" href="<?= $resume ?>" target="_blank" rel="noopener">Download
+                    Résumé</a>
+                <a class="km-btn" href="<?= $github ?>" target="_blank" rel="noopener">GitHub</a>
+                <a class="km-btn" href="<?= $linkedin ?>" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="km-badge km-badge--adobe" href="<?= $adobeUrl ?>" target="_blank" rel="noopener">
+                    <img src="<?= $adobeSvg ?>" alt="Adobe Certified"/>
+                    <span>Adobe Certified</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="km-hero__right" aria-hidden="true">
+            <!-- simple placeholder logo/shape; we can swap later -->
+            <div class="km-hero__mark">M</div>
+        </div>
+    </div>
+</section>
