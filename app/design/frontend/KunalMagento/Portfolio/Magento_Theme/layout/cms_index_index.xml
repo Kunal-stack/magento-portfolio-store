@@ -2,13 +2,14 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 
+    <head>
+        <script src="js/portfolio.js"/>
+    </head>
     <body>
-        <!-- Hide the default CMS title and breadcrumbs -->
         <referenceBlock name="page.main.title" remove="true"/>
         <referenceBlock name="breadcrumbs" remove="true"/>
         <referenceBlock name="cms_page" remove="true"/>
 
-        <!-- Main portfolio layout -->
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template"
                    name="km.portfolio"
