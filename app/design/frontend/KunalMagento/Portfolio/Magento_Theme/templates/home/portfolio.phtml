@@ -1,0 +1,374 @@
+<?php
+/**
+ * Kunal Magento Portfolio – Homepage
+ *
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+
+$resumeUrl      = $block->getViewFileUrl('docs/kunal_resume.pdf');
+$githubUrl      = 'https://github.com/Kunal-stack';
+$linkedinUrl    = 'https://www.linkedin.com/in/kunal-upadhyay-64525717b';
+$hackerearthUrl = 'https://www.hackerearth.com/@kunal1343';
+$email          = 'upadhyaykunal31@gmail.com';
+$phone          = '+91 97600 88092';
+$location       = 'Bengaluru, India';
+$adobeCertUrl   = 'https://www.credly.com/badges/2d5db933-abe1-4715-8b09-3b20d329c08b';
+?>
+
+<div class="kp-page">
+
+    <!-- HERO / INTRO -->
+    <header id="intro" class="kp-hero kp-animate">
+        <div class="kp-hero-main">
+            <span class="kp-eyebrow">Adobe-certified Magento / PHP Developer</span>
+            <h1 class="kp-hero-title">Hi, I’m <span>Kunal Upadhyay</span></h1>
+            <p class="kp-hero-subtitle">
+                Software Developer with 5+ years of experience in Magento 2 and PHP (headless and
+                monolithic), focused on building reliable, fast e-commerce systems and learning new
+                technologies for long-term growth.
+            </p>
+
+            <div class="kp-hero-ctas">
+                <a href="<?= $resumeUrl ?>" target="_blank" rel="noopener"
+                   class="kp-btn kp-btn-primary">
+                    Download Résumé
+                </a>
+                <a href="<?= $githubUrl ?>" target="_blank" rel="noopener"
+                   class="kp-btn kp-btn-ghost">
+                    GitHub
+                </a>
+                <a href="<?= $linkedinUrl ?>" target="_blank" rel="noopener"
+                   class="kp-btn kp-btn-ghost">
+                    LinkedIn
+                </a>
+                <a href="<?= $hackerearthUrl ?>" target="_blank" rel="noopener"
+                   class="kp-btn kp-btn-ghost">
+                    HackerEarth
+                </a>
+            </div>
+
+            <div class="kp-tag-row">
+                <span class="kp-tag">Magento 2 / Adobe Commerce</span>
+                <span class="kp-tag">PHP 8 · MySQL</span>
+                <span class="kp-tag">Kafka</span>
+                <span class="kp-tag">REST APIs & Webhooks</span>
+                <span class="kp-tag">Headless & Monolithic</span>
+            </div>
+        </div>
+
+        <aside class="kp-hero-card">
+            <div class="kp-hero-meta">
+                <p class="kp-hero-meta-title">Software Developer</p>
+                <p class="kp-hero-meta-line">
+                    <span class="kp-years-count" data-target="5">0</span>+ years building Magento-based e-commerce.
+                </p>
+                <p class="kp-hero-meta-line"><?= $location ?></p>
+                <a href="<?= $adobeCertUrl ?>"
+                   target="_blank"
+                   rel="noopener"
+                   class="kp-hero-meta-badge">
+                    Adobe Commerce Certified Professional
+                </a>
+            </div>
+        </aside>
+    </header>
+
+    <!-- ANCHOR NAV -->
+    <nav class="kp-anchor-nav">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="kp-section kp-animate">
+        <h2 class="kp-section-title">Experience</h2>
+
+        <div class="kp-card-list">
+
+            <article class="kp-card">
+                <header class="kp-card-header">
+                    <h3>Software Engineer II · Magento / PHP</h3>
+                    <span class="kp-card-meta">Blackhawk Network · 06/2023 — Present · <?= $location ?></span>
+                </header>
+                <ul class="kp-card-list-items">
+                    <li>Working on an Adobe Commerce project to enhance gift card sales, covering theme
+                        customisation, custom modules, and REST APIs.</li>
+                    <li>Built a 2FA customer login experience using PHTML, LESS, and JavaScript with a
+                        modal popup and secure backend logic.</li>
+                    <li>Improved frontend performance via Magento caching and lazy loading, achieving
+                        ~40% faster perceived speed.</li>
+                    <li>Integrated Symfony-based application features into Magento, reducing overall
+                        load times by ~25% and improving code reuse.</li>
+                    <li>Implemented Kafka for resource sharing between applications and worked with AWS
+                        services (EC2, Secrets Manager, MSK, CloudFormation).</li>
+                    <li>Handle production bugs and critical issues, including third-party modules and
+                        custom admin customisations.</li>
+                </ul>
+                <div class="kp-tag-row">
+                    <span class="kp-tag">Magento Commerce</span>
+                    <span class="kp-tag">2FA / Security</span>
+                    <span class="kp-tag">Kafka</span>
+                    <span class="kp-tag">AWS (EC2, MSK)</span>
+                    <span class="kp-tag">Symfony</span>
+                </div>
+            </article>
+
+            <article class="kp-card">
+                <header class="kp-card-header">
+                    <h3>Sr. Software Engineer · Magento Backend</h3>
+                    <span class="kp-card-meta">Nihilent Limited · 12/2020 — 05/2023 · Pune, India</span>
+                </header>
+                <ul class="kp-card-list-items">
+                    <li>Worked on a headless Magento project (“Veince”) selling photographs and paintings,
+                        with Magento 2 powering the backend.</li>
+                    <li>Enhanced Magento admin features to streamline operations and improve user
+                        accessibility.</li>
+                    <li>Designed and implemented REST APIs in Magento 2, improving integrations and
+                        reducing data retrieval time.</li>
+                    <li>Cut website loading times by ~30% by optimising Magento search criteria and
+                        backend queries.</li>
+                </ul>
+                <div class="kp-tag-row">
+                    <span class="kp-tag">Headless Magento</span>
+                    <span class="kp-tag">REST APIs</span>
+                    <span class="kp-tag">Performance Tuning</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="kp-section kp-animate">
+        <h2 class="kp-section-title">Skills</h2>
+        <div class="kp-skill-grid">
+            <div class="kp-skill-column">
+                <h3>Magento / Backend</h3>
+                <ul>
+                    <li>Magento 2 (headless & monolithic)</li>
+                    <li>Custom modules, observers, plugins</li>
+                    <li>Checkout, customer, order flows</li>
+                    <li>REST APIs, search criteria, EAV & setup patches</li>
+                    <li>Performance & caching (Redis, lazy loading)</li>
+                </ul>
+            </div>
+            <div class="kp-skill-column">
+                <h3>Tech Stack</h3>
+                <ul>
+                    <li>PHP, Magento 2, Symfony</li>
+                    <li>JavaScript, jQuery, Ajax</li>
+                    <li>HTML5, CSS, LESS</li>
+                    <li>MySQL / SQL</li>
+                    <li>Kafka, Redis, OpenSearch / Elasticsearch</li>
+                    <li>Git, Linux</li>
+                    <li>Python (for ML/POC work)</li>
+                </ul>
+            </div>
+            <div class="kp-skill-column">
+                <h3>Soft Skills & Interests</h3>
+                <ul>
+                    <li>Production debugging & ownership</li>
+                    <li>Working with cross-functional teams</li>
+                    <li>Mentoring juniors and leading small groups</li>
+                    <li>Playing chess & table tennis</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="kp-section kp-animate">
+        <h2 class="kp-section-title">Selected Projects</h2>
+
+        <div class="kp-card-list kp-card-list--two-col">
+            <article class="kp-card">
+                <header class="kp-card-header">
+                    <h3>KunalMagento_SkillCatalog</h3>
+                    <span class="kp-card-meta">Magento 2 Open Source · Personal Project</span>
+                </header>
+                <p class="kp-card-text">
+                    Magento 2 module and theme that model my skills as products using custom EAV
+                    attributes and a portfolio-style frontend, showcasing backend and theming skills.
+                </p>
+                <div class="kp-card-footer">
+                    <a href="<?= $githubUrl ?>" target="_blank" rel="noreferrer" class="kp-link">
+                        View on GitHub →
+                    </a>
+                </div>
+            </article>
+
+            <article class="kp-card">
+                <header class="kp-card-header">
+                    <h3>Gift Card Recommendation Engine</h3>
+                    <span class="kp-card-meta">BHN Hackathon · 08/2024</span>
+                </header>
+                <p class="kp-card-text">
+                    Built a POC gift card recommendation engine using collaborative and content-based
+                    filtering in Django with scikit-learn, leading a team of 4 to completion in a
+                    company hackathon.
+                </p>
+                <div class="kp-tag-row">
+                    <span class="kp-tag">Python</span>
+                    <span class="kp-tag">Django</span>
+                    <span class="kp-tag">scikit-learn</span>
+                    <span class="kp-tag">Recommendation Systems</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="kp-section kp-animate">
+        <h2 class="kp-section-title">Education</h2>
+        <div class="kp-card">
+            <header class="kp-card-header">
+                <h3>BTech</h3>
+                <span class="kp-card-meta">
+                    The ICFAI University, Dehradun · 03/2016 — 06/2020 · CGPA 7.21/10
+                </span>
+            </header>
+            <p class="kp-card-text">
+                Bachelor of Technology with coursework in core computer science topics like data
+                structures, databases, and algorithms, forming the foundation for backend and
+                systems development.
+            </p>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="kp-section kp-animate">
+        <h2 class="kp-section-title">Certifications & Achievements</h2>
+        <div class="kp-card">
+            <ul class="kp-card-list-items">
+                <li>Adobe Certified Professional — Adobe Commerce Developer (2024–2026).</li>
+                <li>Awarded “Be Accountable” within project team for ownership and reliability.</li>
+                <li>Led BHN hackathon project building a gift card recommendation engine.</li>
+                <li>Participated in Nihilent hackathon building internal POCs with Node.js and React.</li>
+                <li>Presented a paper on timetable scheduling using genetic algorithms at an
+                    all-India seminar.</li>
+                <li>Completed Java and Python certifications during university.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="kp-section kp-section--contact kp-animate">
+        <h2 class="kp-section-title">Contact</h2>
+        <p class="kp-card-text">
+            Open to Magento / PHP backend roles (remote or based in <?= $location ?>).
+            Best ways to reach me:
+        </p>
+        <p class="kp-contact-list">
+            <a href="mailto:<?= $email ?>" class="kp-link"><?= $email ?></a>
+            ·
+            <a href="tel:<?= preg_replace('/\D+/', '', $phone) ?>" class="kp-link"><?= $phone ?></a>
+            ·
+            <a href="<?= $linkedinUrl ?>" class="kp-link" target="_blank" rel="noreferrer">LinkedIn</a>
+            ·
+            <a href="<?= $githubUrl ?>" class="kp-link" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+    </section>
+
+    <footer class="kp-footer">
+        <p>© <?= date('Y') ?> Kunal Upadhyay · Magento · PHP · Kafka</p>
+    </footer>
+
+    <script>
+        (function () {
+            // Smooth scroll for anchor nav
+            var navLinks = document.querySelectorAll('.kp-anchor-nav a');
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var targetId = link.getAttribute('href');
+                    if (!targetId || targetId.charAt(0) !== '#') {
+                        return;
+                    }
+                    var target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                });
+            });
+
+            // Sections + animate elements
+            var animateEls = document.querySelectorAll('.kp-animate');
+            var sections = document.querySelectorAll('header#intro, .kp-section');
+
+            var navMap = {};
+            navLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (href && href.charAt(0) === '#') {
+                    navMap[href.substring(1)] = link;
+                }
+            });
+
+            // Years counter
+            var heroAnimated = false;
+            var yearsEl = document.querySelector('.kp-years-count');
+            var yearsTarget = yearsEl ? parseInt(yearsEl.getAttribute('data-target') || '0', 10) : 0;
+
+            function startYearsCounter() {
+                if (!yearsEl || !yearsTarget || heroAnimated) return;
+                heroAnimated = true;
+
+                var current = 0;
+                var duration = 800; // ms
+                var start = performance.now();
+
+                function tick(now) {
+                    var progress = Math.min((now - start) / duration, 1);
+                    current = Math.floor(progress * yearsTarget);
+                    yearsEl.textContent = current.toString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        yearsEl.textContent = yearsTarget.toString();
+                    }
+                }
+
+                requestAnimationFrame(tick);
+            }
+
+            // 🔥 Start counter once on load
+            startYearsCounter();
+
+            // Fade-in + active nav
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        var el = entry.target;
+
+                        if (entry.isIntersecting) {
+                            el.classList.add('is-visible');
+                        }
+
+                        var id = el.getAttribute('id');
+                        if (id && navMap[id] && entry.isIntersecting) {
+                            navLinks.forEach(function (l) {
+                                l.classList.remove('is-active');
+                            });
+                            navMap[id].classList.add('is-active');
+                        }
+                    });
+                }, {
+                    threshold: 0.2
+                });
+
+                animateEls.forEach(function (el) {
+                    io.observe(el);
+                });
+            } else {
+                // Fallback: just show all sections
+                animateEls.forEach(function (el) {
+                    el.classList.add('is-visible');
+                });
+            }
+        })();
+    </script>
+</div>

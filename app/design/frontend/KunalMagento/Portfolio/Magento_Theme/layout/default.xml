@@ -2,15 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <!-- Insert our topbar at the very top -->
-        <referenceContainer name="header.panel">
-            <block name="km.topbar"
-                   as="km_topbar"
-                   template="Magento_Theme::html/km_topbar.phtml"
-                   before="-"/>
-        </referenceContainer>
-
-        <!-- Remove Magento default header links row -->
+        <!-- Still keep the default Magento header links hidden for a clean look -->
         <referenceBlock name="header.links" remove="true"/>
         <referenceBlock name="top.links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
