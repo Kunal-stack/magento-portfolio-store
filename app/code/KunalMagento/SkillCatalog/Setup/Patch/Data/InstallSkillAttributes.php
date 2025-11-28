@@ -26,10 +26,12 @@ class InstallSkillAttributes implements DataPatchInterface
         $categorySetup = $this->categorySetupFactory->create(['setup' => $this->moduleDataSetup]);
         $eavSetup      = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
-        // Always use an existing, valid set to avoid "incorrect set id" errors
-        $entityTypeId   = (int)$categorySetup->getEntityTypeId(Product::ENTITY);
-        $attributeSetId = (int)$categorySetup->getDefaultAttributeSetId($entityTypeId); // e.g., 4 "Default"
-        $groupId        = (int)$categorySetup->getDefaultAttributeGroupId($entityTypeId, $attributeSetId);
+        // Use the entity *code* everywhere: 'catalog_product'
+        $entityType    = Product::ENTITY;
+
+        // Default product attribute set & group (e.g. "Default" set, "General" group)
+        $attributeSetId = (int) $categorySetup->getDefaultAttributeSetId($entityType);
+        $groupId        = (int) $categorySetup->getDefaultAttributeGroupId($entityType, $attributeSetId);
 
         $attrs = [
             'km_skill_level' => [
@@ -37,28 +39,28 @@ class InstallSkillAttributes implements DataPatchInterface
                 'label'  => 'Skill Level',
                 'input'  => 'select',
                 'source' => \Magento\Eav\Model\Entity\Attribute\Source\Table::class,
-                'option' => ['values' => ['Beginner','Intermediate','Advanced','Expert']]
+                'option' => ['values' => ['Beginner', 'Intermediate', 'Advanced', 'Expert']],
             ],
             'km_years_experience' => [
                 'type'  => 'int',
                 'label' => 'Years of Experience',
-                'input' => 'text'
+                'input' => 'text',
             ],
             'km_tech_stack' => [
                 'type'  => 'text',
                 'label' => 'Tech Stack (comma separated)',
-                'input' => 'textarea'
+                'input' => 'textarea',
             ],
         ];
 
         foreach ($attrs as $code => $cfg) {
             // Create if missing
-            if (!$eavSetup->getAttributeId($entityTypeId, $code)) {
+            if (!$eavSetup->getAttributeId($entityType, $code)) {
                 $eavSetup->addAttribute(
-                    Product::ENTITY,
+                    $entityType,
                     $code,
                     array_merge([
-                        'group'            => 'General',
+                        'group'            => 'General', // or create your own "Skill Attributes" group later
                         'global'           => ScopedAttributeInterface::SCOPE_GLOBAL,
                         'visible'          => 1,
                         'required'         => 0,
@@ -68,15 +70,15 @@ class InstallSkillAttributes implements DataPatchInterface
                         'comparable'       => 0,
                         'visible_on_front' => 1,
                         'unique'           => 0,
-                        'apply_to'         => ''
+                        'apply_to'         => '',
                     ], $cfg)
                 );
             }
 
-            // Assign to an actually existing set+group (avoid name strings here; use IDs)
-            $attrId = (int)$eavSetup->getAttributeId($entityTypeId, $code);
+            // Assign to default set & group
+            $attrId = (int) $eavSetup->getAttributeId($entityType, $code);
             if ($attrId) {
-                $categorySetup->addAttributeToSet($entityTypeId, $attributeSetId, $groupId, $attrId);
+                $categorySetup->addAttributeToSet($entityType, $attributeSetId, $groupId, $attrId);
             }
         }
 
@@ -87,6 +89,7 @@ class InstallSkillAttributes implements DataPatchInterface
     {
         return [];
     }
+
     public function getAliases(): array
     {
         return [];
