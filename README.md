@@ -1,7 +1,6 @@
 # Magento Portfolio Store
 
-A personal portfolio built on **Magento Open Source** where my skills are listed as products.  
-When an order is placed, Magento emails the customer **and** sends me a custom notification (captured locally via MailHog).
+A personal portfolio built on **Magento Open Source**
 
 ## What’s inside
 
